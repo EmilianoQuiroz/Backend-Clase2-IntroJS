@@ -109,31 +109,39 @@ Caracteristicas
 // saludar()
 
 //Creacion de objetos
+/** La clase es un molde que me dice va a ayudar a crear varias personas  */
 class Persona {
+    /** El constructor es una funcion que me permite pasarle cosas como parametros y asignarselos a la clase*/
     #nombre
     #colores
-
     constructor(nombre) {
-        this.#nombre = nombre
-        this.#colores =[] 
+      this.#nombre = nombre
+      this.#colores = []
     }
-    obtenerNombre() {
-        return this.nombre
+    obtenerNombre(){
+      return this.#nombre
     }
-    obtenerColores() {
-        return this.nombre
+    obtenerColores(){
+      return this.#colores
     }
-    agrgarColor(color){
-        this.#colores.push(color)
+    /**Las funciones dedntro de las clases se conocen como metos */
+    agregarColor(color){
+      this.#colores.push(color)
     }
-}
-
-const p1 = new Persona('Santiago')
-const p2 = new Persona('Pepe')
-const p3 = new Persona('Luis')
-
-console.log(p1.obtenerNombre())
-console.log(p2.obtenerNombre())
-console.log(p3.obtenerNombre())
-
-//042000
+  }
+  
+  //Creo a las personas fuera de la clase
+  const p1 = new Persona('Santiago')
+  const p2 = new Persona('Santiago2')
+  const p3 = new Persona('Santiago3')
+  
+  p1.agregarColor('Verde')
+  p2.agregarColor('Rojo')
+  
+  //Muestro por consola a las personas y a sus colores
+  console.log(p1.obtenerNombre())
+  console.log(p2.obtenerNombre())
+  console.log(p3.obtenerNombre())
+  console.log(p1.obtenerColores())
+  console.log(p2.obtenerColores())
+  
